@@ -2,7 +2,9 @@ import React from "react";
 import './Insert.css';
 import { useState, useEffect } from "react"; //useeffect instant api calls when page re renders
 import Axios from 'axios' // for api calls
-function Home() {
+import  Navbar from './Navbar.js';
+
+function Insert() { 
 
   const [password, setPassword] = useState('')
   const [title, setTitle] = useState('')
@@ -41,7 +43,11 @@ function Home() {
     });
   };
 
-  return <div className="App">
+  return (
+    <div>
+    <div><Navbar /></div>
+  <div className="App">
+    
     <div className="AddingPassword">
       <input
        type= "text"
@@ -78,6 +84,8 @@ function Home() {
       })}
     </div>
   </div>
+  </div>
+  );
 }
 
-export default Home;
+export default Insert;

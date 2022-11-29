@@ -1,29 +1,38 @@
 // import './App.css';
+import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Home from "./pages/Home";
 import Insert from './pages/Insert';  
 import Update from './pages/Update';
 import Delete from './pages/Delete';
-import LogIn from './pages/LogIn';
-import Register from './pages/Register';
 import ErrorPage from "./pages/ErrorPage";
+import Register from "./pages/Register";
 // import { useState, useEffect } from "react"; //useeffect instant api calls when page re renders
 // import Axios from 'axios' // for api calls
+
 function App() {
+  return (
+    // <div>
+    //   <div>Hi</div>
+          <Router>
+            <Routes>
+            <Route path="/" element={<Register />} />
+              <Route path="/Home" element={<Home />} />
+              <Route path="/Insert" element={<Insert />} />
+              <Route path="/Update" element={<Update />} />
+              <Route path="/Delete" element={<Delete />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </Router>
+    // </div>
+        
+    );
+  }
+
+export default App;
+
+  // const [currentForm, setCurrentForm] = useState('LogIn');
   
-  return(
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Insert" element={<Insert />} />
-        <Route path="/Update" element={<Update />} />
-        <Route path="/Delete" element={<Delete />} />
-        <Route path="/LogIn" element={<LogIn />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </Router>
-  )
 
   // const [password, setPassword] = useState('')
   // const [title, setTitle] = useState('')
@@ -99,6 +108,4 @@ function App() {
   //     })}
   //   </div>
   // </div>
-}
 
-export default App;

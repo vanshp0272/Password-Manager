@@ -14,8 +14,43 @@ const db = mysql.createConnection({
     user: 'root',
     host: 'localhost',
     password: 'hulksmash02',
-    database: 'passwordmanager',
-    // insecureAuth : true
+    database: 'passwordmanager'
+});
+
+app.post("/register", (req, res)=> {
+    
+    const username = req.body.username
+    const password = req.body.password
+    
+    db.query(
+        "INSERT INTO login (username, password) VALUES (?,?)",
+        [username, password], 
+        (err, result) => {
+            console.log(err);
+        }
+    );
+});
+
+app.post("/login", (req, res)=> {
+    
+    const username = req.body.username
+    const password = req.body.password
+    
+    db.query(
+        "SELECT * FROM login WHERE username = ? AND password = ?",
+        [username, password], 
+        (err, result) => {
+            if(err) {
+                res.send({err: err});
+            } 
+
+            if(result.length > 0) {
+                res.send(result);
+            } else {
+                res.send({message: "Wrong username/password combination!"});
+            }
+        }
+    );
 });
 
 app.post("/addpassword", (req, res) => { //req -> request, res -> response (router provided) //req.body acts as api call

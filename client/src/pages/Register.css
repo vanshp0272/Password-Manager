@@ -1,0 +1,32 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .reg, .login {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       background-color: lightblue;
+       width: 50%;
+       height: 300px;
+       border-radius: 20px;
+       margin-top: 20px;
+   }
+   
+   .reg button, input, .login button, input{
+       width: 300px;
+       height: 40px;
+       border: none;
+       border-radius: 7px;
+       margin: 10px;
+       padding-left: 15px;
+       font-size: 17px;
+   }
+   
+   button {
+       cursor: pointer;
+   }

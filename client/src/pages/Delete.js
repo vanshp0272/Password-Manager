@@ -1,7 +1,13 @@
 import React from "react";
-
+import Navbar from './Navbar.js';
 function Delete() {
-    return <div>This is Deletion page</div>
+    
+    return (
+        <>
+        <Navbar />
+        <div>This is Deletion page</div>
+        </>
+    );
 }
 
 export default Delete;
