@@ -1,32 +1,75 @@
+
+
+
+/* .reg h1 {
+    /* background-color: yellow; 
+    color: black;
+    text-align: center;
+    margin: 69px 0px 40px 0px;
+    font-size: 4vh;
+    letter-spacing: 6px;
+}
+
+.status h1 {
+    text-align: center;
+}
+
 .register {
+    background-color:lightblue;
+    padding: 0.5vh 0vw 2vh 0vw;
+    margin: 12vh 52vh;
+    /* border: 2px solid black; 
+    border-radius: 12px;
+}
+
+.regcont {
+    /* background-color: green; 
+    text-align: center;
+}
+
+.regcont input {
+    /* padding: 0.vh; 
+    width: 29vw;
+    border: solid black 2px;
+    border-radius: 12px;
+}
+
+.regsubmit {
+    /* background-color: red; 
+    padding: 2vw;
+    text-align: center;
+}
+
+.regsubmit button {
+    padding: 0.6vw;
+    background-color: #000000;
+    color: white;
+    border: 2px solid grey;
+    border-radius: 6px;
+    padding: 2vh 13vw;
+}
+
+.submitsign {
+    /* background-color: yellow; 
     display: flex;
-    flex-direction: column;
+    margin: 3vh 12vw 0vh 15vw;
+    padding: 0px 3vw;
+}
+
+.signa {
+    /* display: flex; 
+    /* justify-content: center; 
+    /* text-align: center; 
+    /* background-color: white; 
+    margin: 16px 17px;
+}
+
+.signp {
+    display: flex;
     justify-content: center;
-    align-items: center;
-   }
-   
-   .reg, .login {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       background-color: lightblue;
-       width: 50%;
-       height: 300px;
-       border-radius: 20px;
-       margin-top: 20px;
-   }
-   
-   .reg button, input, .login button, input{
-       width: 300px;
-       height: 40px;
-       border: none;
-       border-radius: 7px;
-       margin: 10px;
-       padding-left: 15px;
-       font-size: 17px;
-   }
-   
-   button {
-       cursor: pointer;
-   }
+    /* text-align: center; 
+    /* background-color: red;     
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+ */

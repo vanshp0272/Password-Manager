@@ -1,4 +1,5 @@
 // index file used to access server.
+
 const express = require('express') // module of express
 const app = express() 
 const mysql = require('mysql')
@@ -48,6 +49,37 @@ app.post("/login", (req, res)=> {
                 res.send(result);
             } else {
                 res.send({message: "Wrong username/password combination!"});
+            }
+        }
+    );
+});
+
+app.post("/delpassword", (req, res) => { 
+    const title = req.body.title
+    db.query(
+        " DELETE FROM password WHERE title= ? ",
+        [title],
+        (err, result) => {
+            if(err) {
+                console.log(err);
+            } else {
+                res.send("Success");
+            }
+        }
+    );
+});
+
+app.post("/updpassword", (req, res) => { 
+    const {password, title} = req.body
+    const hashedPassword = encrypt(password);
+    db.query(
+        " UPDATE password SET password = ?, iv = ? WHERE title = ? ",
+        [hashedPassword.password, hashedPassword.iv, title], 
+        (err, result) => {
+            if(err) {
+                console.log(err);
+            } else {
+                res.send("Success");
             }
         }
     );

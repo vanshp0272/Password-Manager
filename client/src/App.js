@@ -7,6 +7,8 @@ import Update from './pages/Update';
 import Delete from './pages/Delete';
 import ErrorPage from "./pages/ErrorPage";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
+// import protectedRoutes from "./protectedRoutes";
 // import { useState, useEffect } from "react"; //useeffect instant api calls when page re renders
 // import Axios from 'axios' // for api calls
 
@@ -16,7 +18,9 @@ function App() {
     //   <div>Hi</div>
           <Router>
             <Routes>
-            <Route path="/" element={<Register />} />
+              <Route path="/" element={<Login />} />
+              {/* <Route element = {<protectedRoutes />} /> */}
+              <Route path="/Register" element={<Register />} />
               <Route path="/Home" element={<Home />} />
               <Route path="/Insert" element={<Insert />} />
               <Route path="/Update" element={<Update />} />

@@ -1,0 +1,157 @@
+.badi {
+    background-image: url(https://img.freepik.com/free-vector/abstract-secure-technology-background_52683-28631.jpg);
+    opacity: .9;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.status h1 {
+    display: flex;
+    text-align: center;
+}
+
+.main {
+    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    /* background-image: linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944D); */
+}
+
+.auth, .login, .reg {
+    display: flex;
+    flex-direction: column;
+}
+
+ @media screen and (min-width: 600px){
+    .auth {
+        padding: 5rem; 
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 0.5rem;
+    }
+    
+ }
+
+label {
+    font-size: 140%;
+    text-align: left;
+    padding: 0.25rem 0;
+}
+
+.login input, .reg input {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.login button, .reg button {
+    border: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #7439db;
+    margin: 1rem;
+}
+
+.link {
+    background: none;
+    color: white;
+    text-decoration: underline;
+}
+a {
+    color: white;
+    font-size: 140%;
+}
+
+/*.bg {
+    background-image: url(https://t3.ftcdn.net/jpg/02/69/46/42/360_F_269464287_Q2DoeIRT847orJlYDSX59T8pjlF9nO94.jpg);
+    //height: 100vh; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.log h1 {
+    //background-color: yellow;
+
+    color: navy;
+    text-align: center;
+    margin: 69px 0px 40px 0px;
+    font-size: 8vh;
+    letter-spacing: 6px;
+}
+
+.status h1 {
+    text-align: center;
+}
+
+.login {
+    
+    //background-color:lightblue; 
+    padding: 0.5vh 0vw 2vh 0vw;
+    margin: 12vh 52vh;
+    //border: 2px solid black;
+    border-radius: 12px;
+}
+
+.cont {
+    // background-color: green;
+    text-align: center;
+}
+
+.cont input {
+    /* padding: 0.vh; 
+    width: 29vw;
+    border: solid black 2px;
+    border-radius: 12px;
+}
+
+.submitlog {
+    /* background-color: red; 
+    padding: 2vw;
+    text-align: center;
+}
+
+.submitlog button {
+    padding: 0.6vw;
+    background-color: #000000;
+    color: white;
+    border: 2px solid grey;
+    border-radius: 6px;
+    padding: 2vh 13vw;
+}
+
+.submitsign {
+    /* background-color: yellow; 
+    display: flex;
+    margin: 3vh 12vw 0vh 15vw;
+    padding: 0px 3vw;
+}
+
+.signa {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* background-color: white;
+    margin: 16px 17px;
+}
+
+.signp {
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    /* background-color: red;     
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+*/

@@ -1,39 +1,38 @@
-import React from "react";
+import {React, useState} from "react";
 import  Navbar from './Navbar.js';
+import Axios from 'axios';
+import './Update.css';
 
 function Update() {
-      return(
-      <>
-      <Navbar/>
-      <div>
-        Welcome to update
-      </div>
-      </>
-      )
+  const [updtitle, setupdtitle] = useState('')
+  const [updpassword, setupdpassword] = useState('')
 
-    //   return 
-    // <>
-    // <Navbar />
-    // <div className="Updating password">
+  const upd = () => {
+      Axios.post('http://localhost:3001/updpassword', {
+          title: updtitle,
+          password: updpassword
+      });
+  };
       
-    //   <input
-    //    type= "text"
-    //    placeholder="New Password"
-    //    onChange={(event) => {
-    //     setPassword(event.target.value);
-    //    }}
-    //    />
-    //   <input 
-    //    type= "text" 
-    //    placeholder="Facebook"
-    //    onChange={(event) => {
-    //    setTitle(event.target.value);
-    //    }}
-    //    />
-    //   <button onClick={addPassword}>Update Details</button>   
-    // </div>
-    
-    // </>
+  return(
+    <>
+    <Navbar/>
+    <div className="update">
+      <div className="upd">
+            <h1>Update Password</h1>
+            {/* <div className="up"> */}
+              <input type="text" placeholder="Enter account name" onChange={(e)=> {
+                  setupdtitle(e.target.value);
+              }} />
+              <input type="text" placeholder="Enter new password" onChange={(e)=> {
+                  setupdpassword(e.target.value);
+              }} />
+              <button onClick={upd}>Update</button>
+            {/* </div> */}
+        </div>
+    </div>
+    </>
+  );
 }
 
 export default Update;

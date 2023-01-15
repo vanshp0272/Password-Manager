@@ -44,47 +44,50 @@ function Insert() {
   };
 
   return (
-    <div>
-    <div><Navbar /></div>
-  <div className="App">
-    
-    <div className="AddingPassword">
-      <input
-       type= "text"
-       placeholder="Ex. password123"
-       onChange={(event) => {
-        setPassword(event.target.value);
-       }}
-       />
-      <input 
-       type= "text" 
-       placeholder="Facebook"
-       onChange={(event) => {
-       setTitle(event.target.value);
-       }}
-       />
-      <button onClick={addPassword}>Add Password</button>   
+    <>
+    <Navbar />
+    <div className="bad">
+    <div className="App">
+      <div className="AddingPassword">
+        <label>Password</label>
+        <input
+        type= "text"
+        placeholder="Enter your password"  
+        onChange={(event) => {
+          setPassword(event.target.value);
+        }}
+        />
+        <label>Account Name</label>
+        <input 
+        type= "text" 
+        placeholder="Enter account name"
+        onChange={(event) => {
+        setTitle(event.target.value);
+        }}
+        />
+        <button onClick={addPassword} >Add Password</button>   
+      </div>
+      <div className="Passwords">
+          {passwordList.map((val, key) => {
+            return (
+              <div
+                className="password"
+                onClick={() => {
+                  decryptPassword({
+                    password: val.password,
+                    iv: val.iv,
+                    id: val.id,
+                  });
+                }}
+                key={key}>
+              <h3>{val.title}</h3>
+            </div>
+          );
+        })}
+      </div>
     </div>
-    <div className="Passwords">
-        {passwordList.map((val, key) => {
-          return (
-            <div
-              className="password"
-              onClick={() => {
-                decryptPassword({
-                  password: val.password,
-                  iv: val.iv,
-                  id: val.id,
-                });
-              }}
-              key={key}>
-            <h3>{val.title}</h3>
-          </div>
-        );
-      })}
     </div>
-  </div>
-  </div>
+  </>
   );
 }
 

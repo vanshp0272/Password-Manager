@@ -5,9 +5,11 @@ import Typical from 'react-typical';
 // import {  Link } from "react-router-dom";
 
 function Home(){
+    
     return (
     <div>
         <Navbar />
+        
         <div className="app">
             <header className="app-header">
             <h1>
